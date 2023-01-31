@@ -3,7 +3,7 @@ name: blog
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   build:
@@ -11,13 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: node version
-        run: node -v
-
-      - name: npm version
-        run: npm -v
+      - uses: actions/checkout@v1
+      - name: Fix permission
+        run: |
+          chmod a+x bin/*
+          git commit -am "add permission"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
@@ -27,6 +25,4 @@ jobs:
           git-config-name: dongleicode
           branch: dev # 部署到分支（不要选当前分支或开发分支，会覆盖）
           clean: false
-
-
 
