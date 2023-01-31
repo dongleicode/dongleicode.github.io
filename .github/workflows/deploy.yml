@@ -25,9 +25,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           git-config-email: mhwgodl@163.com
           git-config-name: dongleicode
-          folder: build#部署文件夹
-          branch: main# 部署到分支（不要选当前分支或开发分支，会覆盖）
+          branch: dev # 部署到分支（不要选当前分支或开发分支，会覆盖）
           clean: false
 
-          
+
 
