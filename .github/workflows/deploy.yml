@@ -14,6 +14,8 @@ jobs:
       - uses: actions/checkout@v1
       - name: Fix permission
         run: |
+          git config --global user.email "mhwgodl@163.com"
+          git config --global user.name "dongleicode"
           git commit -am "add permission"
 
       - name: Deploy to GitHub Pages
@@ -23,5 +25,5 @@ jobs:
           git-config-email: mhwgoDL@163.com
           git-config-name: 金瑞
           branch: dev # 部署到分支（不要选当前分支或开发分支，会覆盖）
-          clean: false
+          clean: true
 
