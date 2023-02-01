@@ -20,8 +20,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          git-config-email: mhwgodl@163.com
-          git-config-name: dongleicode
+          git-config-email: mhwgoDL@163.com
+          git-config-name: 金瑞
           branch: dev # 部署到分支（不要选当前分支或开发分支，会覆盖）
           clean: false
 
